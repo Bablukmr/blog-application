@@ -1,7 +1,8 @@
 import React from 'react'
+import styles from './dashboard.module.css'
 
-export default function About() {
+export default function Dashboard() {
   return (
-    <div>About</div>
+    <div className={styles.dashboard}>Dashboard</div>
   )
 }
