@@ -2,16 +2,24 @@ import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 
-function BolgPost({params}) {
-// console.log(params.id)
+async function getData(id){
+  const res= await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,{cache:"no-cache"})
+  if(!res.ok){
+        console.log("error");
+  }
+  return res.json()
+}
+async function BolgPost({params}) {
+  const data=await getData(params.id)
+// console.log(data)
 
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.info}>
-          <h1 className={styles.title}>Lorem ipsum dolor Eos assumen</h1>
+          <h1 className={styles.title}>{data.title}</h1>
           <p className={styles.desc}>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eum ea temporibus dolorem aliquam! Suscipit, delectus ducimus natus laboriosam consectetur reiciendis at possimus blanditiis voluptatem quod cumque nostrum velit laudantium!
+            {data.body}
           </p>
           <div className={styles.author}>
             <Image

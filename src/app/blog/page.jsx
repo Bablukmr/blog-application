@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 async function getData(){
-      const res= await fetch("https://jsonplaceholder.typicode.com/posts")
+      const res= await fetch("https://jsonplaceholder.typicode.com/posts",{cache:"no-cache"})
       if(!res.ok){
             console.log("error");
       }
@@ -20,7 +20,7 @@ export default async function Bolg({ params }) {
                         data.map((item)=>(
 
                    
-                  <Link href={"/blog/testId"} className={styles.container} key={item.id}>
+                  <Link href={`/blog/${item.id}`} className={styles.container} key={item.id}>
                         <div className={styles.imgContainer}>
                               <Image src={"https://images.unsplash.com/photo-1690812099637-803c65c8e495?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMDN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"}
                                     alt=''
