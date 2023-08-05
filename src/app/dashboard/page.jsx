@@ -9,22 +9,17 @@ import Image from "next/image";
 const Dashboard = () => {
   const session = useSession();
   const router = useRouter();
-  
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
   const { data, mutate, error, isLoading } = useSWR(
-    `/api/post?username=${session?.data?.user.name}`,
+    `/api/posts?username=${session?.data?.user.name}`,
     fetcher
   );
-console.log(data);
   if (session.status === "loading") {
     return <p>Loading...</p>;
   }
-
   if (session.status === "unauthenticated") {
     router?.push("/dashboard/login");
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target[0].value;
