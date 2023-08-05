@@ -4,6 +4,11 @@ import Image from 'next/image';
 import IMG from 'public/contact.png'
 import Button from '@/components/Button/Button';
 
+export const metadata = {
+  title: 'Blogger Contact',
+  description: 'This is contact page',
+}
+
 export default function Contact() {
   return (
     <div className={styles.contact}>
