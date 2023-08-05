@@ -21,7 +21,7 @@ export default async function Bolg({ params }) {
                    
                   <Link href={`/blog/${item._id}`} className={styles.container} key={item.id}>
                         <div className={styles.imgContainer}>
-                              <Image src={item.img}
+                              <img src={item.img}
                                     alt=''
                                     width={400}
                                     height={250} className={styles.img} />

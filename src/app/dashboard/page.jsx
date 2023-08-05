@@ -7,19 +7,52 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const Dashboard = () => {
+
+  //OLD WAY TO FETCH DATA
+
+  // const [data, setData] = useState([]);
+  // const [err, setErr] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
+
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     setIsLoading(true);
+  //     const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+  //       cache: "no-store",
+  //     });
+
+  //     if (!res.ok) {
+  //       setErr(true);
+  //     }
+
+  //     const data = await res.json()
+
+  //     setData(data);
+  //     setIsLoading(false);
+  //   };
+  //   getData()
+  // }, []);
+
   const session = useSession();
+
   const router = useRouter();
+  
+  //NEW WAY TO FETCH DATA
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
   const { data, mutate, error, isLoading } = useSWR(
     `/api/posts?username=${session?.data?.user.name}`,
     fetcher
   );
+
   if (session.status === "loading") {
     return <p>Loading...</p>;
   }
+
   if (session.status === "unauthenticated") {
     router?.push("/dashboard/login");
   }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target[0].value;
@@ -39,7 +72,7 @@ const Dashboard = () => {
         }),
       });
       mutate();
-      e.target.reset()
+      // e.target.reset()
     } catch (err) {
       console.log(err);
     }
@@ -65,7 +98,7 @@ const Dashboard = () => {
             : data?.map((post) => (
                 <div className={styles.post} key={post._id}>
                   <div className={styles.imgContainer}>
-                    <Image src={post.img} alt="" width={200} height={100} />
+                    <img src={post.img} alt="" width={200} height={100} />
                   </div>
                   <h2 className={styles.postTitle}>{post.title}</h2>
                   <span
