@@ -18,13 +18,13 @@ export default function About() {
       <div className={styles.textcontainer}>
       <div className={styles.texts}>
         <h1>Who Are We ?</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ducimus illo aliquam totam vitae, dolorem corrupti dicta odit facilis voluptate, fugit possimus blanditiis itaque cumque explicabo temporibus? Fugit, voluptates delectus.<br/> <br/>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque necessitatibus hic eveniet. Quae dignissimos enim dolore excepturi quisquam cum veritatis, magnam voluptates est sit quis. Reiciendis earum error ab.</p>
+        <p>Storytelling Expertise: Digital Storytellers possess a deep understanding of storytelling techniques, including plot development, character arcs, emotional resonance, and pacing. They know how to engage audiences and evoke emotions through their narratives.<br/> <br/>
+        Digital Media Skills: These professionals are adept at using a wide range of digital media, including video, audio, images, graphics, animation, and interactive elements. They leverage these tools to craft multi-dimensional and immersive experiences.<br/><br/><br/> Audience Understanding: Digital Storytellers have a keen understanding of their target audience, ensuring that their stories resonate with the intended viewers and users. They tailor their narratives to meet the preferences and interests of their audience.</p>
       </div>
       <div className={styles.texts}>
       <h1>What We Do ?</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ducimus illo aliquam totam vitae, dolorem corrupti dicta odit facilis voluptate, fugit possimus blanditiis itaque cumque explicabo temporibus? Fugit, voluptates delectus.<br/> <br/>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque necessitatibus hic eveniet. Quae dignissimos enim dolore excepturi quisquam cum veritatis, magnam voluptates est sit quis. Reiciendis earum error ab.</p>
+        <p>Providing Information: I can answer questions and provide information on various subjects, such as general knowledge, history, science, technology, literature, and more.<br/> <br/>
+        Language Assistance: I can help with writing, grammar, and language-related queries, providing suggestions and corrections.</p>
         <Button url='/contact' text="Contact" />
       </div>
       </div>

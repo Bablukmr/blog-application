@@ -10,3 +10,7 @@ export default function Layout({children}) {
     </div>
   )
 }
+export const metadata = {
+  title: 'Portfolio',
+  description: 'Blog Application create through next.js app',
+}
