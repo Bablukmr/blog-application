@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './blog.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-
+//process.env.NEXTAUTH_URL
 async function getData(){
-      const res= await fetch("http://localhost:3000/api/posts", {
+      const res= await fetch("process.env.NEXTAUTH_URL/api/posts", {
             cache: "no-store",
           });
       if(!res.ok){
