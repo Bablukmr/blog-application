@@ -1,18 +1,22 @@
-
-import React from 'react'
-import styles from './page.module.css'
-import Image from 'next/image'
+import React from 'react';
+import styles from './page.module.css';
+import Image from 'next/image';
 
 async function getData(id) {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`) //,{cache:"no-cache"}
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`);
   if (!res.ok) {
     console.log("error");
+    return null;
   }
-  return res.json()
+  return res.json();
 }
-async function BolgPost({params}) {
-  // console.log(params)
-  const data = await getData(params.id)
+
+async function BlogPost({ params }) {
+  const data = await getData(params.id);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.container}>
@@ -37,7 +41,7 @@ async function BolgPost({params}) {
           <Image
             src={data.img}
             alt=""
-            fill={true}
+            layout="fill" // Use layout="fill" instead of fill={true}
             className={styles.image}
           />
         </div>
@@ -48,16 +52,23 @@ async function BolgPost({params}) {
         </p>
       </div>
     </div>
-  )
+  );
 }
-export async function generateMetadata({params}){
-  // console.log(params);
-  const post=await getData(params.id)
-  return{
-    title:post.title,
-    description:post.desc
+
+export async function generateMetadata({ params }) {
+  const post = await getData(params.id);
+
+  if (!post) {
+    return {
+      title: 'Loading...',
+      description: 'Loading...',
+    };
   }
+
+  return {
+    title: post.title,
+    description: post.desc,
+  };
 }
 
-
-export default BolgPost
+export default BlogPost;
