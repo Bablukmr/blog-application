@@ -23,7 +23,7 @@ async function BolgPost({params}) {
             {data.desc}
           </p>
           <div className={styles.author}>
-            <img
+            <Image
               src={data.img}
               alt=""
               width={40}
@@ -34,7 +34,7 @@ async function BolgPost({params}) {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <img
+          <Image
             src={data.img}
             alt=""
             fill={true}
