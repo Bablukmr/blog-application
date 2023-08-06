@@ -4,7 +4,7 @@ import styles from './page.module.css'
 import Image from 'next/image'
 
 async function getData(id) {
-  const res = await fetch(process.env.NEXTAUTH_URL/`api/posts/${id}`) //,{cache:"no-cache"}
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`) //,{cache:"no-cache"}
   if (!res.ok) {
     console.log("error");
   }
