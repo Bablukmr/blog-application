@@ -1,5 +1,5 @@
 # Full Stack Blogger-Application! 
-I am thrilled to announce the successful completion of my latest project, a cutting-edge Blogger-Application built with Next.js, React.js, MongoDB and an array of other powerful technologies.🌐💼
+Full Stack Blogger-Application Build with Next.js, React.js, MongoDB and an array of other powerful technologies.🌐💼
 ## 🔹What is it all about?
 The Blogger Application is a feature-rich, full stack web application that provides users with an immersive and seamless blogging experience. By leveraging the power of Next.js and React.js, users can enjoy a dynamic, fast, and responsive platform for expressing their thoughts and ideas through captivating blog posts.
 ##🔹 Key Features:
