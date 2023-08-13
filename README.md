@@ -3,10 +3,14 @@ I am thrilled to announce the successful completion of my latest project, a cutt
 ##🔹 What is it all about?
 The Blogger Application is a feature-rich, full stack web application that provides users with an immersive and seamless blogging experience. By leveraging the power of Next.js and React.js, users can enjoy a dynamic, fast, and responsive platform for expressing their thoughts and ideas through captivating blog posts.
 ##🔹 Key Features:
-### ✅ User Registration & Login: The application offers a secure and user-friendly registration and login process, ensuring that each user's data and blog posts are safely managed. users can Login with just a few clicks using their existing Google credentials.
-### ✅ Personalized Dashboard: Upon logging in, users are welcomed with a personalized dashboard, where they can effortlessly create, edit, and delete their blog ## ## posts.
-### ✅ Seamless Blogging: Users have the freedom to craft insightful blog posts, sharing their expertise and unique perspectives with the world.
-### ✅ Community Blogging: In the absence of a user dashboard, blogs by registered users seamlessly transition to the Blog page, enriching the platform with diverse content for all to read and enjoy.
+### ✅ User Registration & Login:
+The application offers a secure and user-friendly registration and login process, ensuring that each user's data and blog posts are safely managed. users can Login with just a few clicks using their existing Google credentials.
+### ✅ Personalized Dashboard:
+Upon logging in, users are welcomed with a personalized dashboard, where they can effortlessly create, edit, and delete their blog ## ## posts.
+### ✅  Blogging: 
+Users have the freedom to craft insightful blog posts, sharing their expertise and unique perspectives with the world.
+### ✅ Community Blogging: 
+In the absence of a user dashboard, blogs by registered users seamlessly transition to the Blog page, enriching the platform with diverse content for all to read and enjoy.
 ## 🔹 Pages:
 ### 🏠 Home:
 A welcoming landing page that introduces visitors to the Blogger Application and its compelling features.
