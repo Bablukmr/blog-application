@@ -11,7 +11,7 @@ Upon logging in, users are welcomed with a personalized dashboard, where they ca
 Users have the freedom to craft insightful blog posts, sharing their expertise and unique perspectives with the world.
 ### ✅ Community Blogging: 
 In the absence of a user dashboard, blogs by registered users seamlessly transition to the Blog page, enriching the platform with diverse content for all to read and enjoy.
-## 🔹 Pages:
+## 🔹 Pages
 ### 🏠 Home:
 A welcoming landing page that introduces visitors to the Blogger Application and its compelling features.
 ### 📁 Portfolio: 
