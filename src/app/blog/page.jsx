@@ -28,10 +28,10 @@ async function getData() {
         return []; // Return an empty array to handle the error gracefully
       }
     }
-
+    const data=await getData()
+    console.log(data[0].content)
 export default async function Bolg({ params }) {
       const data=await getData()
-      // console.log(data)
       return (
             <div className={styles.maincontainer}>
                   {
@@ -59,3 +59,8 @@ export default async function Bolg({ params }) {
             </div>
       )
 }
+// const data=await getData()
+export const metadata = {
+      title: data[0].content,
+      description: 'Blog Application create through next.js app',
+    }
