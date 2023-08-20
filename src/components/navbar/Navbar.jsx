@@ -60,17 +60,23 @@ export default function Navbar() {
 
             </div>
             <div className={styles.mobile}>
-                {nav ? <div onClick={handleNav} className={styles.homemenu} >&#9776;</div>
+            <Darkmode  />
+                {nav ? <div onClick={handleNav} className={styles.homemenu} >  &#9776;</div>
                     :
 
                     <div onClick={handleNav} className={styles.mobilemenue}>
+                        
                         <div onClick={handleNav} className={styles.homecross}>&#935;</div>
                         <div style={{zIndex:"99999"}}>
                             {
                                 links.map((item) => (
                                     <Link onClick={handleNav} className={styles.mobilelink} key={item.id} href={item.url}>{item.title}</Link>
                                 ))
-                            }<Darkmode  />
+                            }
+                           <div className={styles.logouts}> 
+                            {
+                    session.status == "authenticated" && <button onClick={signOut} className={styles.logout}>Logout</button>
+                }</div>
                         </div>
 
                     </div>
