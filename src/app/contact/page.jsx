@@ -15,7 +15,7 @@ export default function Contact() {
       <h1 className={styles.title}>Let&apos;s keep in Touch</h1> {/* Replaced ' with &apos; */}
       <div className={styles.maincontainer}>
         <div className={styles.imgcontainer}>
-          <Image src={IMG} alt='IMG' layout="fill" className={styles.images} />
+          <Image src={IMG} alt='IMG' className={styles.images} />
         </div>
         <form className={styles.form}>
           <input placeholder='Name' className={styles.input} />
