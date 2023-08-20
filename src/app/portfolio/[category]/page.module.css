@@ -29,3 +29,21 @@
  .description{
     font-style: 20px;
  }
+ @media screen and (max-width: 776px) {
+    .imgContainer{
+       flex-direction: column;
+        height: 100px;
+        width: 200px;
+        position: relative;
+     }
+     .titles{
+        font-style: 30px;
+     }
+     .item{
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+    
+ }
