@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    margin-right: 100px;
+    margin-right: 200px;
 }
 .imgcontainer{
     flex: 1;
